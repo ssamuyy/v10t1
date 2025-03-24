@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <EditText
+        android:id="@+id/CityNameEdit"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Kaupunki"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/YearEdit"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="2011-2024"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CityNameEdit" />
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="25dp"
+        android:onClick="searchData"
+        android:text="Hae tiedot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/YearEdit" />
+
+    <TextView
+        android:id="@+id/StatusText"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="25dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchButton" />
+
+    <Button
+        android:id="@+id/ListInfoActivityButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:onClick="openListInfoActivity"
+        android:text="Siirry tietoihin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StatusText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
